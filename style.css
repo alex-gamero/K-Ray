@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente principal */
+body {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  background: #fff0f6;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Enlaces */
+a {
+  color: #f48fb1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #d81b60;
+}
+
+/* Botones */
+button, .btn-primary {
+  background-color: #f48fb1;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover, .btn-primary:hover {
+  background-color: #d81b60;
+}
+
+/* Header y navegación */
+header {
+  background-color: #fce4ec;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(216,27,96,0.15);
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  max-height: 50px;
+  border-radius: 15px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Sección Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #fce4ec 0%, #fff0f6 100%);
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #d81b60;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #9c4770;
+}
+
+/* Productos */
+.productos {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.productos h2 {
+  text-align: center;
+  color: #d81b60;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.producto {
+  background-color: #fff0f6;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(216,27,96,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.producto:hover {
+  transform: scale(1.05);
+}
+.producto img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+.producto h3 {
+  color: #d81b60;
+  margin-bottom: 0.5rem;
+}
+.producto p {
+  color: #9c4770;
+  margin-bottom: 1rem;
+}
+
+/* Sobre nosotros */
+.sobre-nosotros {
+  background-color: #fce4ec;
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  color: #6a2c4c;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Formulario de contacto */
+.contacto {
+  max-width: 500px;
+  margin: 2rem auto 4rem;
+  padding: 2rem 1rem;
+  background-color: #fff0f6;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(216,27,96,0.1);
+}
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #d81b60;
+}
+.form-contacto label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #9c4770;
+}
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #f48fb1;
+  border-radius: 12px;
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  outline: none;
+  border-color: #d81b60;
+  background-color: #fff0f6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #fce4ec;
+  color: #9c4770;
+  font-size: 0.9rem;
+  border-top: 1px solid #f48fb1;
+}

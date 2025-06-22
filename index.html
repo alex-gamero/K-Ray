@@ -1,11 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Ray Accessories</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>K-Ray Accesorios</title>
+  <meta name="description" content="Accesorios kawaii para niñas pequeñas - ganchitos, moños y mucho más" />
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <link rel="shortcut icon" href="img/logo.jpg" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.jpg" />
+  
 </head>
 <body>
-    
+  <header>
+    <nav class="main-nav">
+      <a href="#" class="logo">
+        <img src="img/logo.jpg" alt="K-Ray Accesorios Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Accesorios kawaii para niñas pequeñas</h1>
+      <p>Encuentra los mejores ganchitos, moños y accesorios adorables para tus pequeñas.</p>
+      <a href="#productos" class="btn-primary">Ver productos</a>
+    </section>
+
+    <section id="productos" class="productos">
+      <h2>Nuestros Productos</h2>
+      <div class="productos-grid">
+        <!-- Aquí puedes poner tarjetas de productos -->
+        <article class="producto">
+          <img src="img/producto1.jpg" alt="Ganchito rosa kawaii" />
+          <h3>Ganchito Rosa Kawaii</h3>
+          <p>Perfecto para cualquier ocasión.</p>
+          <button>Comprar</button>
+        </article>
+        <article class="producto">
+          <img src="img/producto2.jpg" alt="Moño pastel kawaii" />
+          <h3>Moño Pastel</h3>
+          <p>Suave y lindo para las princesas.</p>
+          <button>Comprar</button>
+        </article>
+        <!-- Más productos... -->
+      </div>
+    </section>
+
+    <section id="sobre-nosotros" class="sobre-nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>K-Ray Accesorios nació con la idea de llevar alegría y color a las niñas pequeñas con accesorios que reflejan ternura y estilo único.</p>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <form action="#" method="post" class="form-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 K-Ray Accesorios. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
