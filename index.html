@@ -1,29 +1,27 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
   <title>K-Ray Accesorios</title>
-  <meta name="description" content="Accesorios kawaii para niñas pequeñas - ganchitos, moños y mucho más" />
-  
-  <link rel="stylesheet" href="style.css" />
-  
+  <meta name="description" content="Accesorios para niñas - ganchitos, moños y mucho más" />
+
+  <!-- Google Fonts: Montserrat y Edu QLD Hand -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400;700&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css"/>
   <link rel="shortcut icon" href="img/logo.jpg" type="image/png" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/logo.jpg" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/logo.jpg" />
-  
 </head>
 <body>
   <header>
     <nav class="main-nav">
       <a href="#" class="logo">
-        <img src="img/logo.jpg" alt="K-Ray Accesorios Logo" />
+        <img src="img/mini-logo.jpg" alt="K-Ray Accesorios Logo" />
       </a>
       <ul class="nav-links">
         <li><a href="#productos">Productos</a></li>
@@ -35,56 +33,87 @@
 
   <main>
     <section class="hero">
-      <h1>Accesorios kawaii para niñas pequeñas</h1>
-      <p>Encuentra los mejores ganchitos, moños y accesorios adorables para tus pequeñas.</p>
-      <a href="#productos" class="btn-primary">Ver productos</a>
+      <div class="carousel">
+        <button class="carousel-arrow left">&#10094;</button>
+        <div class="carousel-images">
+          <img src="img/car1.jpg" alt="Imagen 1" class="active" />
+          <img src="img/car2.jpg" alt="Imagen 2" />
+          <img src="img/car3.jpg" alt="Imagen 3" />
+          <img src="img/car4.jpg" alt="Imagen 4" />
+          <img src="img/car5.jpg" alt="Imagen 5" />
+          <img src="img/car6.jpg" alt="Imagen 6" />
+        </div>
+        <button class="carousel-arrow right">&#10095;</button>
+      </div>
     </section>
+
+    <br><br>
 
     <section id="productos" class="productos">
       <h2>Nuestros Productos</h2>
       <div class="productos-grid">
-        <!-- Aquí puedes poner tarjetas de productos -->
         <article class="producto">
-          <img src="img/producto1.jpg" alt="Ganchito rosa kawaii" />
-          <h3>Ganchito Rosa Kawaii</h3>
+          <img src="img/producto1.jpg" alt="Producto 1" />
+          <h3>Ganchito Rosa</h3>
           <p>Perfecto para cualquier ocasión.</p>
           <button>Comprar</button>
         </article>
         <article class="producto">
-          <img src="img/producto2.jpg" alt="Moño pastel kawaii" />
+          <img src="img/producto2.jpg" alt="Producto 2" />
           <h3>Moño Pastel</h3>
           <p>Suave y lindo para las princesas.</p>
           <button>Comprar</button>
         </article>
-        <!-- Más productos... -->
+        <article class="producto">
+          <img src="img/producto3.jpg" alt="Producto 3" />
+          <h3>Set de Clips</h3>
+          <p>Colores vibrantes y divertidos.</p>
+          <button>Comprar</button>
+        </article>
+        <article class="producto">
+          <img src="img/producto4.jpg" alt="Producto 4" />
+          <h3>Vincha Unicornio</h3>
+          <p>¡Magia y color en cada detalle!</p>
+          <button>Comprar</button>
+        </article>
       </div>
     </section>
 
     <section id="sobre-nosotros" class="sobre-nosotros">
-      <h2>Sobre Nosotros</h2>
-      <p>K-Ray Accesorios nació con la idea de llevar alegría y color a las niñas pequeñas con accesorios que reflejan ternura y estilo único.</p>
+      <div class="sobre-nosotros-content">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          En K-Ray Accesorios creamos productos llenos de ternura y color para niñas pequeñas. Cada accesorio es hecho con amor y pensado para acompañar momentos especiales.
+        </p>
+      </div>
     </section>
 
     <section id="contacto" class="contacto">
       <h2>Contacto</h2>
       <form action="#" method="post" class="form-contacto">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
-
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 K-Ray Accesorios. Todos los derechos reservados.</p>
+    <div class="footer-content">
+      <img src="img/logo.jpg" alt="K-Ray Accesorios Logo" class="footer-logo" />
+      <p>&copy; 2025 K-Ray Accesorios. Todos los derechos reservados.</p>
+    </div>
   </footer>
-
+  <script src="carousel.js"></script>
 </body>
 </html>
