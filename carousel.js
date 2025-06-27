@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     showImage(current);
   });
 
-  // Opcional: cambio automático cada 6s
+  // Opcional: cambio automático cada 5s
   setInterval(() => {
     current = (current + 1) % images.length;
     showImage(current);
-  }, 6000);
+  }, 5000);
 
   // Carrusel horizontal de productos para cada sección
   document.querySelectorAll('.productos-carousel-container').forEach(container => {
@@ -60,5 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
       visibleCount = Math.floor(grid.parentElement.offsetWidth / productoWidth);
       updateCarousel();
     });
+  });
+
+  // Personalización automática de mensaje WhatsApp en botones "Comprar"
+  document.querySelectorAll('.btn-whatsapp-comprar').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Busca el nombre del producto (en el h3 más cercano)
+    const producto = btn.closest('.producto');
+    const nombre = producto ? producto.querySelector('h3').textContent.trim() : '';
+    const mensaje = encodeURIComponent(`¡Hola K-Ray Accesorios! Vi en tu página web el producto ${nombre} y me interesa mucho. Quisiera saber más detalles, disponibilidad y formas de pago. ¡Gracias!`);
+    const url = `https://wa.me/51944793924?text=${mensaje}`;
+    window.open(url, '_blank');
+  });
   });
 });
