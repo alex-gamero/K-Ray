@@ -75,3 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+  });
+  // Cierra el menú al hacer click en un link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+ });
