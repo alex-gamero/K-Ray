@@ -215,7 +215,7 @@ section {
   display: flex;
   align-items: center;
   position: relative;
-  max-width: 1350px;
+  max-width: 1340px;
   margin: 0 auto;
 }
 
@@ -229,7 +229,7 @@ section {
   display: flex;
   transition: transform 0.5s cubic-bezier(.4,0,.2,1);
   gap: 2.2rem;
-  padding-left: 2.5rem;
+  padding-left: 2.1rem;
 }
 
 .producto {
