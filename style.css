@@ -215,7 +215,7 @@ section {
   display: flex;
   align-items: center;
   position: relative;
-  max-width: 1580px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -229,6 +229,7 @@ section {
   display: flex;
   transition: transform 0.5s cubic-bezier(.4,0,.2,1);
   gap: 2.2rem;
+  padding-left: 2.5rem;
 }
 
 .producto {
@@ -917,13 +918,13 @@ html, body {
     width: 100vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
   }
   .productos-grid {
     display: flex;
     gap: 1.2rem;
     padding-left: 4vw;
     padding-right: 4vw;
-    overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
