@@ -34,8 +34,9 @@ header {
   z-index: 100;
 }
 
+/* Espacio vertical al apretar los botones header, a las diferentes secciones */
 section {
-  scroll-margin-top: 89px; 
+  scroll-margin-top: -1px; 
 }
 
 .main-nav {
@@ -215,21 +216,21 @@ section {
   display: flex;
   align-items: center;
   position: relative;
-  max-width: 1340px;
+  max-width: 1340px;        /* Ancho de el carrusel de productos */
   margin: 0 auto;
 }
 
 .productos-carousel {
   overflow: hidden;
   width: 100%;
-  padding-top: 1.5rem;    /* Nuevo: espacio arriba */
+  padding-top: 1.5rem;    
 }
 
 .productos-grid {
   display: flex;
   transition: transform 0.5s cubic-bezier(.4,0,.2,1);
   gap: 2.2rem;
-  padding-left: 2.1rem;
+  padding-left: 2.1rem;     /* Padding izquierdo del grid de productos */
 }
 
 .producto {

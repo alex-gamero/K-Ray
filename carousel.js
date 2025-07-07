@@ -26,41 +26,70 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 5000);
 
   // Carrusel horizontal de productos para cada sección
-  document.querySelectorAll('.productos-carousel-container').forEach(container => {
-    const grid = container.querySelector('.productos-grid');
-    const leftProd = container.querySelector('.productos-arrow.left');
-    const rightProd = container.querySelector('.productos-arrow.right');
-    const producto = grid.querySelector('.producto');
-    if (!grid || !leftProd || !rightProd || !producto) return;
+document.querySelectorAll('.productos-carousel-container').forEach(container => {
+  const grid = container.querySelector('.productos-grid');
+  const leftProd = container.querySelector('.productos-arrow.left');
+  const rightProd = container.querySelector('.productos-arrow.right');
+  const producto = grid.querySelector('.producto');
+  if (!grid || !leftProd || !rightProd || !producto) return;
 
-    let productoWidth = producto.offsetWidth + parseInt(getComputedStyle(grid).gap) || 0;
-    let visibleCount = Math.floor(grid.parentElement.offsetWidth / productoWidth);
-    let position = 0;
+  function getProductoWidth() {
+    // Calcula el ancho real de un producto + gap
+    const style = getComputedStyle(grid);
+    const gap = parseFloat(style.gap) || 0;
+    return producto.offsetWidth + gap;
+  }
 
-    function updateCarousel() {
-      grid.style.transform = `translateX(-${position * productoWidth}px)`;
-    }
+  function getVisibleCount() {
+    // Cuántos productos caben en el viewport del carrusel
+    const containerWidth = grid.parentElement.offsetWidth;
+    const prodWidth = getProductoWidth();
+    return Math.max(1, Math.floor((containerWidth + (parseFloat(getComputedStyle(grid).gap) || 0)) / prodWidth));
+  }
 
-    leftProd.addEventListener('click', () => {
-      if (position > 0) {
-        position--;
-        updateCarousel();
-      }
-    });
+  let productoWidth = getProductoWidth();
+  let visibleCount = getVisibleCount();
+  let position = 0;
 
-    rightProd.addEventListener('click', () => {
-      if (position < grid.children.length - visibleCount) {
-        position++;
-        updateCarousel();
-      }
-    });
+  function updateCarousel() {
+    // Corrige la posición si se pasa del máximo
+    const maxPosition = Math.max(0, grid.children.length - visibleCount);
+    if (position > maxPosition) position = maxPosition;
+    // Calcula el desplazamiento real (sin sumar gap al último producto)
+    const gap = parseFloat(getComputedStyle(grid).gap) || 0;
+    let translate = position * (producto.offsetWidth + gap);
+    grid.style.transform = `translateX(-${translate}px)`;
+  }
 
-    window.addEventListener('resize', () => {
-      productoWidth = producto.offsetWidth + parseInt(getComputedStyle(grid).gap) || 0;
-      visibleCount = Math.floor(grid.parentElement.offsetWidth / productoWidth);
+  leftProd.addEventListener('click', () => {
+    if (position > 0) {
+      position--;
       updateCarousel();
-    });
+    }
   });
+
+  rightProd.addEventListener('click', () => {
+    productoWidth = getProductoWidth();
+    visibleCount = getVisibleCount();
+    const maxPosition = Math.max(0, grid.children.length - visibleCount);
+    if (position < maxPosition) {
+      position++;
+      if (position > maxPosition) position = maxPosition;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    productoWidth = getProductoWidth();
+    visibleCount = getVisibleCount();
+    const maxPosition = Math.max(0, grid.children.length - visibleCount);
+    if (position > maxPosition) position = maxPosition;
+    updateCarousel();
+  });
+
+  // Inicializa el carrusel
+  updateCarousel();
+});
 
   // Personalización automática de mensaje WhatsApp en botones "Comprar"
   document.querySelectorAll('.btn-whatsapp-comprar').forEach(btn => {
