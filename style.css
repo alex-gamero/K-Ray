@@ -154,7 +154,7 @@ section {
 
 /* Fila 1 */
 .productos1 {
-  background: linear-gradient(0deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+  background: linear-gradient(0deg, #C5ECEA 30%, #E5E9E9 100%);
   padding: 3rem 0 2rem 0;
   box-shadow: 0 4px 24px rgba(255,182,185,0.10);
 }
@@ -184,27 +184,12 @@ section {
 
 /* Fila 3 */
 .productos3 {
-  background: linear-gradient(0deg, #C5ECEA 30%, #E5E9E9 100%);
-  padding: 3rem 0 2rem 0;
-  box-shadow: 0 4px 24px rgba(255,182,185,0.10);
-}
-
-.productos3 h2 {
-  text-align: center;
-  color: var(--color-oscuro);
-  margin-bottom: 2.5rem;
-  font-size: 2.2rem;
-  font-family: 'Edu QLD Hand', cursive, sans-serif;
-}
-
-/* Fila 4 */
-.productos4 {
   background: linear-gradient(0deg, #FCC8C1 30%, #FCE9E4 100%);
   padding: 3rem 0 2rem 0;
   box-shadow: 0 4px 24px rgba(255,182,185,0.10);
 }
 
-.productos4 h2 {
+.productos3 h2 {
   text-align: center;
   color: var(--color-oscuro);
   margin-bottom: 2.5rem;
@@ -949,8 +934,7 @@ html, body {
 @media (max-width: 800px) {
   .productos1 h2,
   .productos2 h2,
-  .productos3 h2,
-  .productos4 h2 {
+  .productos3 h2 {
     font-size: 1.3rem;
     margin-bottom: 1.2rem;
     padding: 0 0.5rem;
