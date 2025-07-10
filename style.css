@@ -19,7 +19,7 @@
 /* Tipografía */
 body {
   font-family: 'Montserrat', 'Edu QLD Hand', cursive, sans-serif;
-  background: var(--color-secundario);
+  background: #bbded6;
   color: var(--color-oscuro);
   line-height: 1.6;
   min-height: 100vh;
@@ -487,6 +487,9 @@ section {
   gap: 24px;
   margin: 24px 0 18px 0;
   flex-wrap: nowrap;
+  background: #bbded6;
+  min-height: 220px;
+  border-radius: 18px;
 }
 
 .sobre-nosotros-fotos img {
@@ -823,6 +826,12 @@ footer, .footer-table {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.footer-dev {
+  color: #7fcfc1; 
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 html, body {
