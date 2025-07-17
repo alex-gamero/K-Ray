@@ -92,16 +92,17 @@ document.querySelectorAll('.productos-carousel-container').forEach(container => 
 });
 
   // Personalización automática de mensaje WhatsApp en botones "Comprar"
-  document.querySelectorAll('.btn-whatsapp-comprar').forEach(btn => {
+document.querySelectorAll('.btn-whatsapp-comprar').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     // Busca el nombre del producto (en el h3 más cercano)
     const producto = btn.closest('.producto');
     const nombre = producto ? producto.querySelector('h3').textContent.trim() : '';
-    const mensaje = encodeURIComponent(`¡Hola K-Ray Accesorios! Vi en tu página web el producto ${nombre} y me interesa mucho. %0A Quisiera saber más detalles, disponibilidad y formas de pago. %0A ¡Gracias!`);
-    const url = `https://wa.me/51944793924?text=${mensaje}`;
+    const mensaje = `¡Hola K-Ray Accesorios! Vi en tu página web el producto ${nombre} y me interesa mucho. %0AQuisiera saber más detalles, disponibilidad y formas de pago. %0A¡Gracias!`;
+    const mensajeCodificado = encodeURIComponent(mensaje).replace(/%0A/g, '%0A');
+    const url = `https://wa.me/51944793924?text=${mensajeCodificado}`;
     window.open(url, '_blank');
-  });
+    });
   });
 });
 
