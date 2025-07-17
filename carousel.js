@@ -98,7 +98,7 @@ document.querySelectorAll('.productos-carousel-container').forEach(container => 
     // Busca el nombre del producto (en el h3 más cercano)
     const producto = btn.closest('.producto');
     const nombre = producto ? producto.querySelector('h3').textContent.trim() : '';
-    const mensaje = encodeURIComponent(`¡Hola K-Ray Accesorios! Vi en tu página web el producto ${nombre} y me interesa mucho. %0A Quisiera saber más detalles, disponibilidad y formas de pago. %0A ¡Gracias!`);
+    const mensaje = encodeURIComponent(`¡Hola K-Ray Accesorios! Vi en tu página web el producto ${nombre} y me interesa mucho. Quisiera saber más detalles, disponibilidad y formas de pago. ¡Gracias!`);
     const url = `https://wa.me/51944793924?text=${mensaje}`;
     window.open(url, '_blank');
   });
