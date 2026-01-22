@@ -4,7 +4,7 @@
 
 ![Demo of K-Ray.Shop](assetsREADME/website.gif)
 
-## 🚀 Overview  
+## Overview  
 Custom-designed e-commerce platform showcasing my frontend development skills. Built with performance and aesthetics in mind.  
 
 ## ✨ Features  
